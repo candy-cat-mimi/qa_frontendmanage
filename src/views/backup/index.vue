@@ -183,6 +183,7 @@ export default {
     },
     downloadFile(url, fileName,row) {//跨域文件路径、下载到本地的文件名
       url+=row.fileName;
+      fileName=row.createdTime+'.sql';
       var x = new XMLHttpRequest();
       x.open("GET", url, true);
       x.responseType = 'blob';
